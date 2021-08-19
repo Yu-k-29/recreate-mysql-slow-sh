@@ -1,7 +1,7 @@
 TARGET_FILE=/var/log/mysql/mysql-slow.log
 
 if [ -e $TARGET_FILE ]; then
-    rm -rf /var/log/mysql/mysql-slow.log
+    rm -rf $TARGET_FILE
     echo "Delete $TARGET_FILE"
     echo ""
 fi
