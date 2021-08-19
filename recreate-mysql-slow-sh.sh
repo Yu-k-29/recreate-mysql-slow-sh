@@ -5,15 +5,12 @@ if [ -e $TARGET_FILE ]; then
     rm -rf /var/log/mysql/mysql-slow.log
     echo "Delete mysql-slow.log!!"
     echo ""
-    del_flag = "$true"
 fi
 
-if [ "$del_flag"== "$true"]; then
-    echo "mysql restart..."
-    sudo service mysql restart
-    echo "complete!!"
-    echo ""
-    sudo chmod 777 /var/log/mysql/mysql-slow.log
+echo "mysql restart..."
+sudo service mysql restart
+echo "complete!!"
+echo ""
+sudo chmod 777 /var/log/mysql/mysql-slow.log
 
 echo "Recreate mysql-slow.log is complete!!"
-fi
